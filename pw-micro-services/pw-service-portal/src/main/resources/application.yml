@@ -14,8 +14,8 @@ eureka:
 
 logging:
   level:
-    ROOT: DEBUG
-    org.springframework.data.rest.webmvc: 'DEBUG'
+    ROOT: INFO
+    org.springframework.data.rest.webmvc: 'INFO'
     org.springframework.boot.autoconfigure.security: 'WARN'
     org.springframework.context.support: 'WARN'
     org.springframework.jdbc.datasource: 'WARN'

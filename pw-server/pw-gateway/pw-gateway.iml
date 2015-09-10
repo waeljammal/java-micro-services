@@ -116,6 +116,7 @@
     <orderEntry type="library" name="Maven: com.goldmansachs:gs-collections-api:5.1.0" level="project" />
     <orderEntry type="library" name="Maven: com.lmax:disruptor:3.3.0" level="project" />
     <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.0.RC3" level="project" />
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.12.4" level="project" />
   </component>
 </module>
 
