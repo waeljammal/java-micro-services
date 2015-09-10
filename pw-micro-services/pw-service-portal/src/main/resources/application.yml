@@ -1,0 +1,37 @@
+
+server:
+  port: ${PORT:0}
+
+spring:
+  jpa:
+    generate-ddl: true
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:8761}/eureka/
+
+logging:
+  level:
+    ROOT: DEBUG
+    org.springframework.data.rest.webmvc: 'DEBUG'
+    org.springframework.boot.autoconfigure.security: 'WARN'
+    org.springframework.context.support: 'WARN'
+    org.springframework.jdbc.datasource: 'WARN'
+    org.springframework.boot.context: 'WARN'
+    org.springframework.security.web: 'WARN'
+    org.springframework.http: 'WARN'
+    org.springframework.scheduling.concurrent: 'WARN'
+    org.springframework.beans.factory.config: 'WARN'
+    org.springframework.integration.config: 'WARN'
+    org.springframework.web.servlet.mvc.method.annotation: 'WARN'
+    org.springframework.beans.factory.support: 'WARN'
+
+---
+spring:
+  profiles: cloud
+eureka:
+  instance:
+    hostname: ${APPLICATION_DOMAIN}
+    nonSecurePort: 80
