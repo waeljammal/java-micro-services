@@ -31,6 +31,7 @@ Note that you do not connect to the micro services directly, instead all request
 
 # URL's
 - Hystrix Dashboard | http://localhost:9903/
+- Hystrix Dashboard Stream URL | http://localhost:9023/hystrix.stream | Paste into the input
 - Eureka Dashboard | http://localhost:8761/
 - Domain Service | http://localhost:9023/domain-service
 - Domain With Portals Service | http://localhost:9023/1/domain-with-portals
