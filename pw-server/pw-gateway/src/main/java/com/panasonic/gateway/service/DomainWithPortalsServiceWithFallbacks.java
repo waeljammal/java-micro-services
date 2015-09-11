@@ -33,9 +33,9 @@ public class DomainWithPortalsServiceWithFallbacks {
         return this.portalClient.getPortals(domainId);
     }
 
-    public Collection<Domain> getDomainFallback(Long domainId) {
+    public Domain getDomainFallback(Long domainId) {
         System.out.println("getDomainFallback");
-        return Arrays.asList();
+        return new Domain();
     }
 
     @HystrixCommand(fallbackMethod = "getDomainFallback")

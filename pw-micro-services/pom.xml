@@ -18,7 +18,6 @@
     <modules>
         <module>pw-service-portal</module>
         <module>pw-service-domain</module>
-        <module>pw-service-hystrix-dashboard</module>
     </modules>
 
     <dependencies>
