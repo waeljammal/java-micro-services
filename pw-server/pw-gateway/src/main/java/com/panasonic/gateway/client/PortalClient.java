@@ -10,9 +10,9 @@ import java.util.Collection;
 
 @FeignClient("portal-service")
 public interface PortalClient {
-	@RequestMapping(method = RequestMethod.GET, value = "/{domainId}/portal")
+	@RequestMapping(method = RequestMethod.GET, value = "/{domainId}")
     public Collection<Portal> getPortals(@PathVariable("domainId") Long domainId);
 
-    @RequestMapping(method = RequestMethod.GET, value = "/{domainId}/portal/{portalId}")
+    @RequestMapping(method = RequestMethod.GET, value = "/{domainId}/{portalId}")
     public Portal getPortal(@PathVariable("domainId") Long domainId, @PathVariable("portalId") Long portalId);
 }

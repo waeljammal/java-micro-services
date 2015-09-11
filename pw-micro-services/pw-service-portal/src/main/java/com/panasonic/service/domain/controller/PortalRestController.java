@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Collection;
 
 @RestController
-@RequestMapping("/{domainId}/portal")
+@RequestMapping("/{domainId}")
 public class PortalRestController {
 	@Autowired
 	private PortalRepository portalRepository;

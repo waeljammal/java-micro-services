@@ -22,8 +22,7 @@ public class DomainWithPortalsRestController {
 		DeferredResult<DomainWithPortals> passportDeferredResult = new DeferredResult<>();
 		Stream<Portal> portalsStream = this.passportService.getPortals(domainId);
 		Stream<Domain> domainStream = this.passportService.getDomain(domainId);
-		this.passportService.getPassport(domainStream, portalsStream).consume(passportDeferredResult::setResult);
+		this.passportService.getDomainWithPortals(domainStream, portalsStream).consume(passportDeferredResult::setResult);
 		return passportDeferredResult;
 	}
-
 }

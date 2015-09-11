@@ -36,7 +36,7 @@ public class DomainWithPortalsService {
         }).dispatchOn(this.environment, Environment.cachedDispatcher()).log("domain");
     }
 
-	public Stream<DomainWithPortals> getPassport(Stream<Domain> domain, Stream<Portal> portals) {
+	public Stream<DomainWithPortals> getDomainWithPortals(Stream<Domain> domain, Stream<Portal> portals) {
 		return Streams.zip(domain.buffer(), portals.buffer(), tuple ->
 			new DomainWithPortals(tuple.getT1().get(0), tuple.getT2()));
 	}

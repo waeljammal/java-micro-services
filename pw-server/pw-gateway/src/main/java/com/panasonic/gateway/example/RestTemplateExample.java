@@ -18,8 +18,8 @@ public class RestTemplateExample implements CommandLineRunner {
 //		ParameterizedTypeReference<List<Portal>> responseType = new ParameterizedTypeReference<List<Portal>>() {};
 //
 //		ResponseEntity<List<Portal>> exchange = this.restTemplate.exchange(
-//				"http://portal-service/{userId}/bookmarks", HttpMethod.GET,
-//				null, responseType, (Object) "pwebb");
+//				"http://portal-service/{domainId}", HttpMethod.GET,
+//				null, responseType, (Object) "1");
 //
 //		exchange.getBody().forEach(System.out::println);
 	}
