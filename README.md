@@ -25,7 +25,7 @@ and highly performant.
 - Start up all the servers located in pw-server
 - Start up all the services in pw-micro-services
 
-You can use your IDE to just launch the main application in each module, I use multi start in InteliJ Idea to launch them for me with a single click. Otherwise you can use mvn spring-boot:run
+You can use your IDE to just launch the main application in each module, I use multirun (https://plugins.jetbrains.com/plugin/7248?pr=idea) in InteliJ Idea to launch them for me with a single click. Otherwise you can use mvn spring-boot:run
 
 Note that you do not connect to the micro services directly, instead all requests are made to the pw-gateway, your micro services would sit behind the DMZ and be inaccessible to the public, only your API gateways will be public.
 
