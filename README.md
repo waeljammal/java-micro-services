@@ -24,7 +24,7 @@ and highly performant.
 - Each module in the project is an independant application
 - Start up all the servers located in pw-server
 - Start up all the services in pw-micro-services
-- It can take up to 30 seconds for the services to be auto discovered, this can be changed as well in the hystrix configuration.
+- It can take up to 30 seconds for the services to be auto discovered, this can be changed as well in the eureka configuration.
 
 You can use your IDE to just launch the main application in each module, I use multirun (https://plugins.jetbrains.com/plugin/7248?pr=idea) in InteliJ Idea to launch them for me with a single click. Otherwise you can use mvn spring-boot:run
 
