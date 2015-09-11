@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/portal-works-poc.iml" filepath="$PROJECT_DIR$/portal-works-poc.iml" />
       <module fileurl="file://$PROJECT_DIR$/pw-server/pw-eureka/pw-eureka.iml" filepath="$PROJECT_DIR$/pw-server/pw-eureka/pw-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/pw-server/pw-gateway/pw-gateway.iml" filepath="$PROJECT_DIR$/pw-server/pw-gateway/pw-gateway.iml" />
-      <module fileurl="file://$PROJECT_DIR$/pw-server/pw-hystrix/pw-hystrix.iml" filepath="$PROJECT_DIR$/pw-server/pw-hystrix/pw-hystrix.iml" />
       <module fileurl="file://$PROJECT_DIR$/pw-micro-services/pw-micro-services.iml" filepath="$PROJECT_DIR$/pw-micro-services/pw-micro-services.iml" />
       <module fileurl="file://$PROJECT_DIR$/pw-parent/pw-parent.iml" filepath="$PROJECT_DIR$/pw-parent/pw-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/pw-server/pw-server.iml" filepath="$PROJECT_DIR$/pw-server/pw-server.iml" />

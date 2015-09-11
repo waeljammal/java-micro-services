@@ -1,6 +1,7 @@
 package com.panasonic.gateway.controller;
 
 import com.panasonic.gateway.service.DomainWithPortalsService;
+import com.panasonic.gateway.service.DomainWithPortalsServiceWithFallbacks;
 import com.panasonic.gateway.to.Domain;
 import com.panasonic.gateway.to.DomainWithPortals;
 import com.panasonic.gateway.to.Portal;
@@ -15,14 +16,22 @@ import reactor.rx.Stream;
 public class DomainWithPortalsRestController {
 
 	@Autowired
-	private DomainWithPortalsService passportService;
+	private DomainWithPortalsService domainWithPortalsService;
+
+    @Autowired
+    private DomainWithPortalsServiceWithFallbacks domainWithPortalsServiceWithFallbacks;
 
 	@RequestMapping("/{domainId}/domain-with-portals")
-	public DeferredResult<DomainWithPortals> passport(@PathVariable Long domainId) {
+	public DeferredResult<DomainWithPortals> domainWithPortals(@PathVariable Long domainId) {
 		DeferredResult<DomainWithPortals> passportDeferredResult = new DeferredResult<>();
-		Stream<Portal> portalsStream = this.passportService.getPortals(domainId);
-		Stream<Domain> domainStream = this.passportService.getDomain(domainId);
-		this.passportService.getDomainWithPortals(domainStream, portalsStream).consume(passportDeferredResult::setResult);
+		Stream<Portal> portalsStream = this.domainWithPortalsService.getPortals(domainId);
+		Stream<Domain> domainStream = this.domainWithPortalsService.getDomain(domainId);
+		this.domainWithPortalsService.getDomainWithPortals(domainStream, portalsStream).consume(passportDeferredResult::setResult);
 		return passportDeferredResult;
 	}
+
+    @RequestMapping("/{domainId}/domain-with-portals-alternative")
+    public DomainWithPortals domainWithPortalsAndFallbacks(@PathVariable Long domainId) {
+        return new DomainWithPortals(domainWithPortalsServiceWithFallbacks.getDomain(domainId), domainWithPortalsServiceWithFallbacks.getPortals(domainId));
+    }
 }

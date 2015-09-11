@@ -20,4 +20,9 @@ public class DomainWithPortals {
         setDomain(domain);
         setPortals(portals);
     }
+
+    public DomainWithPortals(Domain domain, Collection<Portal> portals) {
+        setDomain(domain);
+        setPortals(portals);
+    }
 }

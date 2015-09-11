@@ -19,7 +19,6 @@
 
     <modules>
         <module>pw-gateway</module>
-        <module>pw-hystrix</module>
         <module>pw-eureka</module>
     </modules>
 

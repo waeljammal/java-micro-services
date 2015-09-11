@@ -24,7 +24,6 @@
         <processorPath useClasspath="true" />
         <module name="pw-eureka" />
         <module name="pw-gateway" />
-        <module name="pw-hystrix" />
         <module name="pw-service-domain" />
         <module name="pw-service-eureka" />
         <module name="pw-service-hystrix-dashboard" />
