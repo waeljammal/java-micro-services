@@ -19,10 +19,21 @@ and highly performant.
 - Ability to spread the load between multiple databases or use a single cluster
 - Low configuration using auto discovery and fallbacks
 
-# Usage
+# How to run it
 - Each module in the project is an independant application
 - Start up all the servers located in pw-server
 - Start up all the services in pw-micro-services
 
-You can use your IDE to just launch the main application in each module, I use multi start in InteliJ Idea to launch them for me
-with a single click. Otherwise you can use mvn spring-boot:run
+You can use your IDE to just launch the main application in each module, I use multi start in InteliJ Idea to launch them for me with a single click. Otherwise you can use mvn spring-boot:run
+
+Note that you do not connect to the micro services directly, instead all requests are made to the pw-gateway, your micro services would sit behind the DMZ and be inaccessible to the public, only your API gateways will be public.
+
+# URL's
+- Hystrix Dashboard | http://localhost:9903/
+- Eureka Dashboard | http://localhost:8761/
+- Domain Service | http://localhost:9023/domain-service
+- Domain With Portals Service | http://localhost:9023/1/domain-with-portals
+- Portal Service | http://localhost:9023/portal-service/1
+- Basic Health Report | http://localhost:8761/health
+- Discovered Services Feed | http://localhost:8761/eureka/apps
+- There is much more I recommend you read | http://projects.spring.io/spring-cloud/spring-cloud.html
