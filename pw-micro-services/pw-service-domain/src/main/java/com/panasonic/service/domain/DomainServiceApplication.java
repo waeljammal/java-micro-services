@@ -12,7 +12,7 @@ import java.util.Arrays;
 
 @SpringBootApplication
 @EnableEurekaClient
-public class PortalServiceApplication {
+public class DomainServiceApplication {
 
 	@Bean
 	public CommandLineRunner init(DomainRepository portalRepository) {
@@ -27,7 +27,7 @@ public class PortalServiceApplication {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(PortalServiceApplication.class, args);
+		SpringApplication.run(DomainServiceApplication.class, args);
 	}
 
 }

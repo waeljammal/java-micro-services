@@ -9,12 +9,6 @@ import org.springframework.context.annotation.Bean;
 
 import reactor.Environment;
 
-/**
- * Visit <a href="http://localhost:9023/jlong/passport">the passport integration API</a>
- * and the Zuul proxied API gateways for
- * <a href="http://localhost:9023/bookmark-service/jlong/bookmarks/">bookmarks</a>
- * and <a href="http://localhost:9023/contact-service/jlong/contacts/">contacts</a>.
- */
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
