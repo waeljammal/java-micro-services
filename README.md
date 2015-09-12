@@ -16,6 +16,9 @@ This example demonstrates how you could implement a micro services architecture 
 and highly performant.
 
 # Requirements
+- Java 8
+
+# Design Requirements
 - Ability to define a technology stack per micro service, for example one micro service might work better if using nosql while another might work better with a different storage method.
 - Ability to scale a single part of your infrastructure quickly to resolve bottle necks
 - Ability to spread the load between multiple databases or use a single cluster
