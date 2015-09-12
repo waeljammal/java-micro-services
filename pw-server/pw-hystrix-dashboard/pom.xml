@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>com.panasonic</groupId>
-    <artifactId>pw-service-hystrix-dashboard</artifactId>
+    <artifactId>pw-hystrix-dashboard</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>

@@ -24,6 +24,7 @@
         <processorPath useClasspath="true" />
         <module name="pw-eureka" />
         <module name="pw-gateway" />
+        <module name="pw-hystrix-dashboard" />
         <module name="pw-service-domain" />
         <module name="pw-service-eureka" />
         <module name="pw-service-hystrix-dashboard" />
@@ -34,6 +35,7 @@
       <module name="pw-eureka" target="1.8" />
       <module name="pw-gateway" target="1.8" />
       <module name="pw-hystrix" target="1.8" />
+      <module name="pw-hystrix-dashboard" target="1.8" />
       <module name="pw-micro-services" target="1.8" />
       <module name="pw-parent" target="1.8" />
       <module name="pw-ribbon-and-eureka" target="1.8" />
