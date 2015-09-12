@@ -36,7 +36,9 @@ Note that you do not connect to the micro services directly, instead all request
 - Eureka Dashboard | http://localhost:8761/
 - Domain Service | http://localhost:9023/domain-service
 - Domain With Portals Service | http://localhost:9023/1/domain-with-portals
+- Domain With Portals & Fallbacks | http://localhost:9023/1/domain-with-portals-alternative
 - Portal Service | http://localhost:9023/portal-service/1
 - Basic Health Report | http://localhost:8761/health
 - Discovered Services Feed | http://localhost:8761/eureka/apps
 - There is much more I recommend you read | http://projects.spring.io/spring-cloud/spring-cloud.html
+- Metrics | http://localhost:8761/metrics | Many others like /restart /refresh /pause /stop /start
