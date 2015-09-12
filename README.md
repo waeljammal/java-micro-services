@@ -8,6 +8,7 @@ Java Spring Micro Services
 - Spring Boot
 - Spring Cloud
 - Eureka
+- Global Authentication
 - Auto discovery, quickly deploy more micro services
 - Flat tables, maintaining a disconnect makes it easier to split up your data storage or even use different implementations such as mongo, mysql, oracle etc. accross different micro services. For instance instead of portals having a strong relation with domains they are instead linked together by the domains id making the relationship weak, when requesting portals you supply the domain id to get all portals for that domain and so on, there are no joining tables so you could host your portals in mysql while hosting your domains in mongo, whatever suits the microservice the most.
 
