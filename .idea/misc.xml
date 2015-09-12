@@ -13,6 +13,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/pw-micro-services/pw-service-module/pom.xml" />
+        <option value="$PROJECT_DIR$/pw-server/pw-auth-dashboard/pom.xml" />
         <option value="$PROJECT_DIR$/pw-server/pw-hystrix/pom.xml" />
         <option value="$PROJECT_DIR$/pw-server/pw-ribbon-and-eureka/pom.xml" />
       </set>

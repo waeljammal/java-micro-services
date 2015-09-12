@@ -22,16 +22,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="pw-auth-dashboard" />
         <module name="pw-eureka" />
         <module name="pw-gateway" />
         <module name="pw-hystrix-dashboard" />
+        <module name="pw-security-dashboard" />
         <module name="pw-service-domain" />
         <module name="pw-service-eureka" />
         <module name="pw-service-hystrix-dashboard" />
         <module name="pw-service-portal" />
+        <module name="pw-service-secured-resource" />
+        <module name="pw-service-security-sso" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="pw-auth-dashboard" target="1.8" />
       <module name="pw-eureka" target="1.8" />
       <module name="pw-gateway" target="1.8" />
       <module name="pw-hystrix" target="1.8" />
@@ -39,11 +44,14 @@
       <module name="pw-micro-services" target="1.8" />
       <module name="pw-parent" target="1.8" />
       <module name="pw-ribbon-and-eureka" target="1.8" />
+      <module name="pw-security-dashboard" target="1.8" />
       <module name="pw-server" target="1.8" />
       <module name="pw-service-domain" target="1.8" />
       <module name="pw-service-eureka" target="1.8" />
       <module name="pw-service-hystrix-dashboard" target="1.8" />
       <module name="pw-service-portal" target="1.8" />
+      <module name="pw-service-secured-resource" target="1.8" />
+      <module name="pw-service-security-sso" target="1.8" />
       <module name="pw-service-user" target="1.8" />
     </bytecodeTargetLevel>
   </component>

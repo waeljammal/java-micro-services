@@ -11,6 +11,8 @@
       <module fileurl="file://$PROJECT_DIR$/pw-server/pw-server.iml" filepath="$PROJECT_DIR$/pw-server/pw-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/pw-micro-services/pw-service-domain/pw-service-domain.iml" filepath="$PROJECT_DIR$/pw-micro-services/pw-service-domain/pw-service-domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/pw-micro-services/pw-service-portal/pw-service-portal.iml" filepath="$PROJECT_DIR$/pw-micro-services/pw-service-portal/pw-service-portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pw-micro-services/pw-service-secured-resource/pw-service-secured-resource.iml" filepath="$PROJECT_DIR$/pw-micro-services/pw-service-secured-resource/pw-service-secured-resource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pw-micro-services/pw-service-security-sso/pw-service-security-sso.iml" filepath="$PROJECT_DIR$/pw-micro-services/pw-service-security-sso/pw-service-security-sso.iml" />
     </modules>
   </component>
 </project>
