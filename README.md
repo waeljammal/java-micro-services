@@ -33,17 +33,17 @@ You can use your IDE to launch the main application in each module, I use multir
 Note that you do not connect to the micro services directly, instead all requests are made to the pw-gateway, your micro services would sit behind the DMZ and be inaccessible to the public, only your API gateways will be public.
 
 # URL's
-- Hystrix Dashboard | http://localhost:9903/
-- Hystrix Dashboard Stream URL | http://localhost:9023/hystrix.stream | Paste into the input
-- Eureka Dashboard | http://localhost:8761/
-- Domain Service | http://localhost:9023/domain-service
-- Domain With Portals Service | http://localhost:9023/1/domain-with-portals
-- Domain With Portals & Fallbacks | http://localhost:9023/1/domain-with-portals-alternative
-- Portal Service | http://localhost:9023/portal-service/1
-- Basic Health Report | http://localhost:8761/health
-- Discovered Services Feed | http://localhost:8761/eureka/apps
+- **Hystrix Dashboard** | http://localhost:9903/
+- **Hystrix Dashboard Stream URL** | http://localhost:9023/hystrix.stream | Paste into the input
+- **Eureka Dashboard** | http://localhost:8761/
+- **Domain Service** | http://localhost:9023/domain-service
+- **Domain With Portals Service** | http://localhost:9023/1/domain-with-portals
+- **Domain With Portals & Fallbacks** | http://localhost:9023/1/domain-with-portals-alternative
+- **Portal Service** | http://localhost:9023/portal-service/1
+- **Basic Health Report** | http://localhost:8761/health
+- **Discovered Services Feed** | http://localhost:8761/eureka/apps
+- **Metrics** | http://localhost:8761/metrics | Many others like /restart /refresh /pause /stop /start
 - There is much more I recommend you read | http://projects.spring.io/spring-cloud/spring-cloud.html
-- Metrics | http://localhost:8761/metrics | Many others like /restart /refresh /pause /stop /start
 
 # Testing Authentication
 
@@ -51,7 +51,7 @@ There is no demo ui included so you will need to test authentication using the c
 
 - pw-service-security-sso is the openid sso service, this is currently configured to be a service but this is flexible and can be configured instead like the gateway so you could have pw-auth-openid-gateway etc. instead.
 
-To test that auth is working try to visit http://localhost:9023/secured-resource/hello-world you should receive an unauthorized message. If so follow the steps below to authenticate and call the service again.
+To test that auth is working try to visit **http://localhost:9023/secured-resource/hello-world** you should receive an unauthorized message. If so follow the steps below to authenticate and call the service again.
 
 First make sure the secured resource module is started and paste the following line into your command line:
 
