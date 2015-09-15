@@ -72,7 +72,7 @@ You should receive a response like the following:
 Copy the access_token value and replace the _PASTE-TOKEN-HERE_ string in the line below and run that in your command line:
 
 ```
-curl http://localhost:9023/secured-resource/hello-world -H "Authorization: Bearer _PASTE-TOKEN-HERE_"
+curl http://localhost:9023/secured-resource/hello-world -H "Authorization: Bearer PASTE-TOKEN-HERE"
 ```
 
 You should receive a response from the call.
