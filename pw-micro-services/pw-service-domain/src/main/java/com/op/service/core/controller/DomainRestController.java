@@ -1,7 +1,7 @@
-package com.op.service.domain.controller;
+package com.op.service.core.controller;
 
-import com.op.service.domain.entity.Domain;
-import com.op.service.domain.repository.DomainRepository;
+import com.op.service.core.model.Domain;
+import com.op.service.core.repository.DomainRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
