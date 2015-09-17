@@ -1,20 +1,16 @@
+
 server:
   port: ${PORT:0}
-  contextPath: '/uaa'
 
-security:
-  user:
-    password: 'password'
+spring:
+  jpa:
+    generate-ddl: true
+
 
 eureka:
   client:
     serviceUrl:
       defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:8761}/eureka/
-
-logging:
-  level:
-    ROOT: INFO
-    org.springframework.security: 'DEBUG'
 
 database:
   driver: 'com.mysql.jdbc.Driver'
@@ -29,7 +25,7 @@ hibernate:
     auto: 'update' #create-drop
 
 entitymanager:
-  packagesToScan: com.op.service.security.sso.model
+  packagesToScan: com.op.service.domain.model
 
 ---
 spring:

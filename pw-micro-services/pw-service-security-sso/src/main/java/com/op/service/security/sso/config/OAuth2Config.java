@@ -7,6 +7,7 @@ import org.springframework.security.oauth2.config.annotation.configurers.ClientD
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
+import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 
 @Configuration
 @EnableAuthorizationServer
@@ -22,12 +23,16 @@ class OAuth2Config extends AuthorizationServerConfigurerAdapter {
 	}
 
 	@Override
-	public void configure(ClientDetailsServiceConfigurer clients)
-			throws Exception {
-		clients.inMemory()
-				.withClient("demo")
-				.secret("demosecret")
-				.authorizedGrantTypes("authorization_code", "refresh_token", "password")
-				.scopes("openid");
-	}
+	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+        clients.inMemory()
+                .withClient("demo")
+                .secret("demosecret")
+                .authorizedGrantTypes("authorization_code", "refresh_token", "password", "client_credentials")
+                .scopes("openid");
+    }
+
+    @Override
+    public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
+        oauthServer.allowFormAuthenticationForClients();
+    }
 }

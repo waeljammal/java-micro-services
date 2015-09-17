@@ -11,7 +11,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 @Configuration
 @EnableGlobalAuthentication
 public class SecurityConfig extends GlobalAuthenticationConfigurerAdapter {
-
     @Autowired
     private UserDetailsService userDetailsService;
 
@@ -19,5 +18,4 @@ public class SecurityConfig extends GlobalAuthenticationConfigurerAdapter {
     public void init(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(this.userDetailsService);
     }
-
 }

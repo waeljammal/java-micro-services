@@ -16,6 +16,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>pw-service-core</module>
         <module>pw-service-portal</module>
         <module>pw-service-domain</module>
         <module>pw-service-security-sso</module>
