@@ -1,6 +1,6 @@
 package com.op.service.portal.repository;
 
-import com.op.service.portal.entity.Portal;
+import com.op.service.portal.model.Portal;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

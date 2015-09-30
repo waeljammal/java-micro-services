@@ -1,4 +1,4 @@
-package com.op.service.security.sso.config;
+package com.op.service.portal.config;
 
 import com.op.service.core.config.DatabaseConfigBase;
 import org.springframework.context.annotation.Configuration;

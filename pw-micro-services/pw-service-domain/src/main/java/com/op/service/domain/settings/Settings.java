@@ -1,4 +1,4 @@
-package com.op.service.security.sso.settings;
+package com.op.service.domain.settings;
 
 
 import com.op.service.core.settings.SettingsBase;

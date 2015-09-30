@@ -20,9 +20,8 @@
         <module>pw-service-portal</module>
         <module>pw-service-domain</module>
         <module>pw-service-security-sso</module>
-        <module>pw-service-secured-resource</module>
     </modules>
-
+    
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>

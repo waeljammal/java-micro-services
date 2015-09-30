@@ -4,7 +4,9 @@ server:
 spring:
   jpa:
     generate-ddl: true
-
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:9023/security-sso-service/uaa/user
 
 eureka:
   client:
@@ -26,6 +28,21 @@ logging:
     org.springframework.integration.config: 'WARN'
     org.springframework.web.servlet.mvc.method.annotation: 'WARN'
     org.springframework.beans.factory.support: 'WARN'
+
+database:
+  driver: 'com.mysql.jdbc.Driver'
+  url: 'jdbc:mysql://localhost:3306/poc'
+  username: 'root'
+  password: 'jammal123'
+
+hibernate:
+  dialect: 'org.hibernate.dialect.MySQL5Dialect'
+  show_sql: true
+  hbm2ddl:
+    auto: 'update' #create-drop
+
+entitymanager:
+  packagesToScan: com.op.service.portal.model
 
 ---
 spring:

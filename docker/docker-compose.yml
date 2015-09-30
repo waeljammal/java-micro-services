@@ -1,0 +1,32 @@
+hystrix:
+  image: pw/pw-hystrix-dashboard
+  ports:
+   - "9903:9903"
+  links:
+   - gateway
+   - eureka
+gateway:
+  image: pw/pw-gateway
+  ports:
+   - "9023:9023"
+  links:
+   - eureka
+   - service-domain
+   - service-portal
+   - service-security-sso
+eureka:
+  image: pw/pw-eureka
+  ports:
+   - "8761:8761"
+service-domain:
+  image: pw/pw-service-domain
+  links:
+   - eureka
+service-portal:
+  image: pw/pw-service-portal
+  links:
+   - eureka
+service-security-sso:
+  image: pw/pw-service-security-sso
+  links:
+   - eureka
