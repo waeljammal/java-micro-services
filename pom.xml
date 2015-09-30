@@ -29,7 +29,6 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <lombok.version>1.12.4</lombok.version>
-        <docker.image.prefix>pw</docker.image.prefix>
     </properties>
 
     <dependencies>
@@ -68,22 +67,6 @@
                     <fork>true</fork>
                     <executable>/Users/Wael/.jenv/shims/javac</executable>
                     <compilerVersion>1.8</compilerVersion>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>com.spotify</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <version>0.2.3</version>
-                <configuration>
-                    <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-                    <dockerDirectory>src/main/docker</dockerDirectory>
-                    <resources>
-                        <resource>
-                            <targetPath>/</targetPath>
-                            <directory>${project.build.directory}</directory>
-                            <include>${project.build.finalName}.jar</include>
-                        </resource>
-                    </resources>
                 </configuration>
             </plugin>
         </plugins>
