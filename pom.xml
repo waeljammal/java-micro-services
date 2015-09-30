@@ -54,18 +54,10 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3</version>
-                <configuration>
                     <verbose>true</verbose>
                     <fork>true</fork>
-                    <executable>/Users/Wael/.jenv/shims/javac</executable>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                     <compilerVersion>1.8</compilerVersion>
                 </configuration>
             </plugin>
