@@ -9,7 +9,7 @@
         <groupId>com.panasonic</groupId>
         <artifactId>pw-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../pw-parent</relativePath>
+        <relativePath>../</relativePath>
     </parent>
 
     <artifactId>pw-micro-services</artifactId>
@@ -21,7 +21,7 @@
         <module>pw-service-domain</module>
         <module>pw-service-security-sso</module>
     </modules>
-    
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
