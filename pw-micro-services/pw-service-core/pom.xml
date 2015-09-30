@@ -9,6 +9,7 @@
         <groupId>com.panasonic</groupId>
         <artifactId>pw-micro-services</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../</relativePath>
     </parent>
 
     <groupId>com.panasonic</groupId>
