@@ -1,3 +1,14 @@
+db:
+  image: mysql:5.6
+  hostname: db
+  ports:
+    - "3306:3306"
+  environment:
+    - MYSQL_ROOT_PASSWORD=
+    - MYSQL_DATABASE=poc
+    - MYSQL_USER=root
+    - MYSQL_PASSWORD=
+
 hystrix:
   image: pw/pw-hystrix-dashboard
   ports:

@@ -17,6 +17,10 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <properties>
+        <docker.image.prefix>pw</docker.image.prefix>
+    </properties>
+
     <modules>
         <module>pw-gateway</module>
         <module>pw-eureka</module>
