@@ -1,7 +1,7 @@
 # extend the most recent long term support Ubuntu version
 FROM ubuntu:14.04
 
-MAINTAINER Stephen L. Reed (http://texai.org, stephenreed@yahoo.com)
+MAINTAINER Wael Jammal
 
 # this is a non-interactive automated build - avoid some warning messages
 ENV DEBIAN_FRONTEND noninteractive
