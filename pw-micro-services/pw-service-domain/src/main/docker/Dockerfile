@@ -1,4 +1,4 @@
-FROM java:8
+FROM waeljammal/java8-nginx-mysql
 VOLUME /tmp
 ADD pw-service-domain-1.0-SNAPSHOT.jar app.jar
 RUN bash -c 'touch /app.jar'
