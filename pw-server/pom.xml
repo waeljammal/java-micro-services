@@ -22,8 +22,8 @@
     </properties>
 
     <modules>
-        <module>pw-gateway</module>
         <module>pw-eureka</module>
+        <module>pw-gateway</module>
         <module>pw-hystrix-dashboard</module>
     </modules>
 

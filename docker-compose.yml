@@ -1,0 +1,76 @@
+# MySQL Database Container
+# Currently using a single Master
+
+database:
+  image: mysql:5.6
+  expose:
+    - "3306"
+  ports:
+    - "3306:3306"
+  environment:
+    - MYSQL_ROOT_PASSWORD=jammal123
+    - MYSQL_DATABASE=poc
+    - MYSQL_USER=root
+    - MYSQL_PASSWORD=jammal123
+
+# Public Services - Run One Instance Only
+
+hystrix-dashboard:
+  image: pw/pw-hystrix-dashboard
+  ports:
+    - "9903:9903"
+  hostname: hystrix
+  links:
+    - gateway:gateway
+    - discovery:discovery
+  command: >
+    --spring.profiles.active=docker
+
+discovery:
+  image: pw/pw-eureka
+  expose:
+    - "8761"
+  ports:
+    - "8761:8761"
+  command: >
+    --spring.profiles.active=docker
+
+# Public Services - Can run more than one instance but load balance through kubernetes
+
+gateway:
+  image: pw/pw-gateway
+  hostname: gateway
+  ports:
+    - "9023:9023"
+  links:
+    - discovery:discovery
+    - service-domain
+    - service-portal
+    - service-security-sso
+  command: >
+    --spring.profiles.active=docker
+
+# Private Microservices - Run as many instances as required
+# You can scale these using docker-compose scale service-domain=2 service-portal=3 and so on..
+
+service-domain:
+  image: pw/pw-service-domain
+  links:
+    - discovery:discovery
+    - database:database
+  command: >
+    --spring.profiles.active=docker
+service-portal:
+  image: pw/pw-service-portal
+  links:
+    - discovery:discovery
+    - database:database
+  command: >
+    --spring.profiles.active=docker
+service-security-sso:
+  image: pw/pw-service-security-sso
+  links:
+    - discovery:discovery
+    - database:database
+  command: >
+    --spring.profiles.active=docker

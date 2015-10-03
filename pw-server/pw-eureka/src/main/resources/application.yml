@@ -2,10 +2,17 @@ server:
   port: ${PORT:8761}
 
 eureka:
+  instance:
+    hostname: localhost
   client:
     registerWithEureka: false
     fetchRegistry: false
-#  server:
-#    waitTimeInMsWhenSyncEmpty: 0
-  instance:
-    hostname: localhost
+
+---
+# For deployment in Docker containers
+spring:
+  profiles: docker
+
+logging:
+  level:
+    ROOT: INFO

@@ -1,2 +1,17 @@
 server:
   port: ${PORT:9903}
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+
+---
+# For deployment in Docker containers
+spring:
+  profiles: docker
+
+logging:
+  level:
+    ROOT: INFO
