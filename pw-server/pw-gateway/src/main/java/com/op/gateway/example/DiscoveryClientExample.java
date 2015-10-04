@@ -25,5 +25,4 @@ public class DiscoveryClientExample implements CommandLineRunner {
 			System.out.println(ToStringBuilder.reflectionToString(s));
 		});
 	}
-
 }
