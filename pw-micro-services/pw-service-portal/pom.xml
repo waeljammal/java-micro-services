@@ -48,6 +48,7 @@
                     <imageName>${docker.image.prefix}/${project.artifactId}:${project.version}</imageName>
                     <!--<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>-->
                     <registryUrl>http://localhost:5000/</registryUrl>
+                    <serverId>docker-hub</serverId>
                     <pushImage>true</pushImage>
                     <resources>
                         <resource>
@@ -56,18 +57,19 @@
                             <include>${project.build.finalName}.jar</include>
                         </resource>
                     </resources>
+
+                    <servers>
+                        <server>
+                            <id>docker-hub</id>
+                            <serveraddress>http://localhost:5000/</serveraddress>
+                            <username>wael</username>
+                            <password>jammal123</password>
+                        </server>
+                    </servers>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
-    <servers>
-        <server>
-            <id>docker-hub</id>
-            <username>foo</username>
-            <password>{gc4QPLrlgPwHZjAhPw8JPuGzaPitzuyjeBojwCz88j4=}</password>
-        </server>
-    </servers>
 
     <dependencies>
         <dependency>
