@@ -47,8 +47,7 @@
                     <entryPoint>["java","-Djava.security.egd=file:/dev/./urandom","-jar","/${project.artifactId}:${project.version}.jar"]</entryPoint>
                     <imageName>${docker.image.prefix}/${project.artifactId}:${project.version}</imageName>
                     <!--<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>-->
-                    <registryUrl>http://localhost:5000/</registryUrl>
-                    <serverId>docker-hub</serverId>
+                    <!--<registryUrl>http://localhost:5000/</registryUrl>-->
                     <pushImage>true</pushImage>
                     <resources>
                         <resource>
@@ -57,15 +56,6 @@
                             <include>${project.build.finalName}.jar</include>
                         </resource>
                     </resources>
-
-                    <servers>
-                        <server>
-                            <id>docker-hub</id>
-                            <serveraddress>http://localhost:5000/</serveraddress>
-                            <username>wael</username>
-                            <password>jammal123</password>
-                        </server>
-                    </servers>
                 </configuration>
             </plugin>
         </plugins>
