@@ -42,9 +42,8 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <imageName>pw-service-portal</imageName>
                     <baseImage>waeljammal/java8-nginx-mysql</baseImage>
-                    <entryPoint>["java","-Djava.security.egd=file:/dev/./urandom","-jar","/${project.artifactId}:${project.version}.jar"]</entryPoint>
+                    <entryPoint>["java","-Djava.security.egd=file:/dev/./urandom","-jar","/${project.build.finalName}.jar"]</entryPoint>
                     <imageName>localhost:5000/${docker.image.prefix}/${project.artifactId}:${project.version}</imageName>
                     <!--<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>-->
                     <!--<registryUrl>http://localhost:5000/</registryUrl>-->
