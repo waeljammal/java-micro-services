@@ -44,9 +44,9 @@
                 <configuration>
                     <baseImage>waeljammal/java8-nginx-mysql</baseImage>
                     <entryPoint>["java","-Djava.security.egd=file:/dev/./urandom","-jar","/${project.build.finalName}.jar"]</entryPoint>
-                    <imageName>172.17.15.102:5000/${docker.image.prefix}/${project.artifactId}:${project.version}</imageName>
+                    <imageName>${docker.image.prefix}/${project.artifactId}:${project.version}</imageName>
                     <!--<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>-->
-                    <!--<registryUrl>https://172.17.15.102:5000</registryUrl>-->
+                    <registryUrl>http://172.17.15.102:5000</registryUrl>
                     <pushImage>true</pushImage>
                     <resources>
                         <resource>
