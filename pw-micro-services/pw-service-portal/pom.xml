@@ -46,7 +46,7 @@
                     <entryPoint>["java","-Djava.security.egd=file:/dev/./urandom","-jar","/${project.build.finalName}.jar"]</entryPoint>
                     <imageName>${docker.image.prefix}/${project.artifactId}:${project.version}</imageName>
                     <!--<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>-->
-                    <registryUrl>172.17.15.102:5000</registryUrl>
+                    <registryUrl>tcp://172.17.15.102:5000</registryUrl>
                     <pushImage>true</pushImage>
                     <resources>
                         <resource>
