@@ -32,7 +32,7 @@
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
-                <version>0.2.3</version>
+                <version>0.3.5</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -42,8 +42,11 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+                    <baseImage>waeljammal/java8-nginx-mysql</baseImage>
+                    <entryPoint>["java","-Djava.security.egd=file:/dev/./urandom","-jar","/${project.build.finalName}.jar"]</entryPoint>
+                    <imageName>172.17.15.102:5000/${docker.image.prefix}/${project.artifactId}:${project.version}</imageName>
                     <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+                    <registryUrl>http://172.17.15.102:5000/v2</registryUrl>
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
